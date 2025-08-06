@@ -40,6 +40,7 @@ export default {
   "/frontend": [
     {
       text: "AI大模型",
+      collapsed: false,
       items: [
         {
           text: "纯前端调用deepseek v3模型，流式返回，支持md文本、table、代码等",

@@ -15,7 +15,7 @@ export default [
   {
     text: "前端技术",
     activeMatch: "/frontend",
-    link: "/frontend/index",
+    link: "/frontend/AI/纯前端调用deepseek%20v3模型，流式返回，支持md文本、table、代码等",
     // items: [
     //   { text: "AI大模型", link: "/frontend/AI/index" },
     //   { text: "vue", link: "/frontend/vue/index" },
@@ -25,6 +25,11 @@ export default [
   },
   { text: "就职履历", link: "/resume/index" },
   { text: "生活分享", link: "/life/index" },
+  {
+    text: "掘金主页",
+    link: "https://juejin.cn/user/4222562141210478/posts",
+    target: "_blank",
+  },
   // {
   //   text: "生活分享",
   //   link: "/markdown-examples",
