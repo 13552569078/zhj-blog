@@ -1,13 +1,13 @@
-##### 1：watch / watchEffect
+#### 1：watch / watchEffect
 watch 监听 ref  及 reactive 的区别，二者具体用法如下：
-###### ref
+#### ref
 ```
  watch(state, (newValue, oldValue) => {
           console.log(`原值为${oldValue}`)
           console.log(`新值为${newValue}`)
         })
 ```
-###### reactive
+#### reactive
 ```
 const state = reactive({count: 0})
 watch(() => state.count, (newValue, oldValue) => {
@@ -15,7 +15,7 @@ watch(() => state.count, (newValue, oldValue) => {
   console.log(`新值为${newValue}`)
 }
 ```
-###### watchEffect
+#### watchEffect
 
 ```
 const state = reactive({ count: 0, name: 'zs' })
@@ -24,7 +24,7 @@ watchEffect(() => {
    console.log(state.name)
 })
 ```
-###### 何时使用watch   watchEffect，二者区别
+#### 何时使用watch   watchEffect，二者区别
 1：可见watch可监听ref 及 reactive的值，并且可自由配置，默认第一次不触发，可自由配置，用于需要监听变化前及变化后的值，用法繁琐
 
 ```
@@ -49,7 +49,7 @@ watchEffect(() => {
 })
 ```
 
-##### 2：getCurrentInstance proxy 
+#### 2：getCurrentInstance proxy 
 由于vue3不会提供this 选项，在处理路由会获取当前的路由list，可如下操作
 
 ```

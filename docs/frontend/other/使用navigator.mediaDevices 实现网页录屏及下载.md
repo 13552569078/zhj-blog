@@ -1,5 +1,5 @@
 ## 借用navigator.mediaDevices前端网页录屏（全部录屏）及自动下载
-##### html结构
+#### html结构
 1：navigator.mediaDevices.getDisplayMedia 来捕获屏幕或者窗口，如果是多屏幕会要你自行选择
 
 2：浏览器兼容处理

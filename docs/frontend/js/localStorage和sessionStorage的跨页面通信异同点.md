@@ -1,4 +1,4 @@
-### 背景
+## 背景
 
 项目场景需要缓存`localStorage`或者`sessionStorage`的时候，涉及到跨页面传值通信，以`a`页面通过`window.open`打开的**同源页面**`b`页面为例，测试下 `localStorage`或者`sessionStorage`的页面通信。<br/>
 
@@ -7,7 +7,7 @@
 1.  同源
 2.  `window.open`打开
 
-### localStorage
+## localStorage
 
 创建`a`页面代码如下
 
@@ -45,7 +45,7 @@
 </html>
 ```
 
-#### localStoraget通信验证流程
+### localStoraget通信验证流程
 
 1.  点击`设置aa` `button`
 2.  点击`打开同源页面`,打开新页面
@@ -61,7 +61,7 @@
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/08766f31bfac4efbb418396a245672fd~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071931&x-orig-sign=ozFcOLJPnqK1AukJauZ12KxKsQg%3D)
 
-### localStorage
+## localStorage
 
 同样的流程，创建原始页面 代码如下
 
@@ -99,7 +99,7 @@
 </html>
 ```
 
-#### sessionStorage通信验证流程
+### sessionStorage通信验证流程
 
 1.  点击`设置aa` `button`
 2.  点击`打开同源页面`,打开新页面
@@ -115,7 +115,7 @@
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e10849c7f96e494182b701168966081f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071931&x-orig-sign=LfUpIS5XUwdCZNh7wmtYu%2B1LKmE%3D)
 
-### 试验结论
+## 试验结论
 
 1.  `sessionStorage`和`localStorage`在新页面打开前，已经存在的缓存，新打开的页面永阳可以获取到对应缓存
 2.  新页面打开后，原始页面设置新的`localStorage`，**新打开页面同样可以获取到**
@@ -123,7 +123,7 @@
 4.  新页面打开后,原始页面设置新的`sessionStorage`，**新打开页面获取不到**
 5.  新页面操作`sessionStorage`，**不会**影响到原始页面的`sessionStorage`
 
-### 总结
+## 总结
 
 1.  `localStorage`是引用，原始页面和新页面操作均**会影响**对应的数据
 2.  `sessionStorage`是复制，原始页面和新页面操作均会**不影响**彼此的缓存，只是新开的时候复制了一份缓存

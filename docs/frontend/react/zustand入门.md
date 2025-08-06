@@ -1,14 +1,14 @@
-### 背景
+## 背景
 最近公司某些项目需要vue迁移到react技术栈，技术调研react的状态管理工具zustand，相较于redux简便不少，具体的计较可以查看 [zustand官方文档](https://docs.pmnd.rs/zustand/getting-started/introduction)，下面主要讲解下zustand的基本用法。<br />
 以下例子采用的是zustand@4.5.2版本
 
-### 安装
+## 安装
 
 ```js
 npm install zustand
 ```
 
-### 基础类型
+## 基础类型
 前提：在src目录下创建store文件夹用于统一管理状态，store创建useTest.ts文件，内容如下
 
 ```js
@@ -85,7 +85,7 @@ export default TestB;
 
 ![微信截图_20240327105211.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5004fa519fa04b3bbb446af16a0be3ea~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=436&h=120&s=14172&e=jpg&b=fefefe)
 
-### 引用类型
+## 引用类型
 useTest.ts
 ```js
 import { create } from "zustand";
@@ -181,7 +181,7 @@ export default TestB;
 
 ![微信截图_20240327110924.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c26453fd5b874ce589ddb9c15c06dddd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=545&h=294&s=40182&e=jpg&b=fefefe)
 
-### action中获取state
+## action中获取state
 在入有个计数器，每次点击，store加一，需要在action获取state，用法没变化
 
 ```js
@@ -220,7 +220,7 @@ export const useTestStore = create<Istore>()((set) => ({
 }));
 
 ```
-### 监听变动
+## 监听变动
 A组件变更了count计数器，B组件需要监听count变动，回调函数， 监听全部的store变化和特定的count变化，B组件代码如下，组件下载调用取消监听。useTestStore.subscribe返回值为取消监听，调用即可取消监听
 
 ```js
@@ -292,7 +292,7 @@ export default TestB;
 
 ```
 
-### 选择性订阅 useShallow
+## 选择性订阅 useShallow
 在 Zustand 中，`useShallow` 是一个用于选择性地订阅 store 中状态变化的自定义钩子。可以选择拼装自己需要的状态，有点类似于vue的computed, 注意两种写法
 
 ```js
@@ -362,7 +362,7 @@ export default TestB;
 
 ```
 
-### action异步设置
+## action异步设置
 注意：setUserInfoNameAsync异步设置state
 
 ```js
@@ -416,7 +416,7 @@ export const useTestStore = create<Istore>()((set) => ({
 }));
 
 ```
-### 引入immer 简化复杂对象操作
+## 引入immer 简化复杂对象操作
 对用用惯vue的来说，react每次更改state需要先创建副本，在赋值setState操作起来麻烦，`zustand`借助`immer`来简化操作
 
 ```js
@@ -554,7 +554,7 @@ export default TestA;
 
 ```
 
-### 实现永久缓存，对于用户信息等状态，需要永久存储，否则一刷新就没了，
+## 实现永久缓存，对于用户信息等状态，需要永久存储，否则一刷新就没了，
 新建一个useUser.ts的store,`devtools``persist`实现local缓存
 
 ```js
@@ -591,7 +591,7 @@ export const useUserStore = create<BearState>()(
 );
 
 ```
-### 结尾
+## 结尾
 以上就是zustand基础用法，入门而已，全部代码在文档末尾
 
 ```js

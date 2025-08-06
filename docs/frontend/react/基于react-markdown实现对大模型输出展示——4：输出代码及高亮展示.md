@@ -27,9 +27,9 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[2,'我是2的id']]
 
-### 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
+## 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
 
-### 代码示例
+## 代码示例
 \`\`\`javascript
 ${codeExample}
 \`\`\`
@@ -138,7 +138,7 @@ class ComplexNumber {
 
 const richMarkdownContent = `
 # 一级标题：Markdown 丰富示例 [[1,'我是1的id']]
-### 代码示例
+## 代码示例
 \`\`\`javascript
 ${codeExample}
 \`\`\`

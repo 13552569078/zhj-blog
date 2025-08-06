@@ -1,11 +1,11 @@
-### 背景
+## 背景
 最近有朋友要搭建一个vue3+ts的项目，本着帮一把的原则，搭建了一个，仅仅作为参考，市场很多成熟框架如admin等。好记性不如烂笔头记录下，目录如下 后面不在重复提及 
 
 ![微信截图_20240417163427.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6912c02bfb4241ceb40b79ad6171e2e9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=347&h=531&s=50370&e=jpg&b=1a1a1a)
-### 项目搭建
+## 项目搭建
 采用`vite `  `vue3`  `ts`  `eslint` ` pinia`  `tailwindcss`  `element-plus` 等搭建项目，下面分布记录下
 
-### vite初始化项目
+## vite初始化项目
 
 ```js
 npm create vite
@@ -30,19 +30,19 @@ cd vite-tets-work
 
 安装依赖 dev项目启动成功， 默认`http://localhost:5173/`端口
 
-### 安装sass
+## 安装sass
 
 ```js
  npm i -D sass
 ```
-### 安装@types/node
+## 安装@types/node
 解决vite.config.ts的  `import path from "node:path";` ts报错问题
 
 ```js
 npm i @types/node -D
 ```
 
-### 设置别名和sever 设置代理及端口设置
+## 设置别名和sever 设置代理及端口设置
 `vite.config.ts`文件做以下修改,此时端口已更改且默认打开浏览器
 
 
@@ -115,7 +115,7 @@ export default defineConfig({
 
 ```
 
-### router路由
+## router路由
 
 
 ```js
@@ -242,7 +242,7 @@ app.mount("#app");
 
 重新 `npm run dev` 默认`http://localhost:8861/login` 打开你的login组件，  `http://localhost:8861/test/test1`会打开test下的test1组件。
 
-### 安装pinia
+## 安装pinia
 [pinia](http://pinia.cc/docs/introduction.html)
 
 ```js
@@ -354,7 +354,7 @@ app.mount('#app');
 
 此时`login`组件操作，可修改`pinia`， `test1`组件会获取到`pinia`状态， 此时ts 报错 `store找不到`重启vscode即可
 
-### 安装element-plus @element-plus/icons-vue 及动态导入
+## 安装element-plus @element-plus/icons-vue 及动态导入
 [element-plus](https://element-plus.org/zh-CN/component/overview.html)
 `unplugin-vue-components`  `unplugin-auto-import`自动导入插件，可以按需引入不用此插件
 
@@ -442,7 +442,7 @@ const addStore = () => {
 ```
 可见`element-plus`已经引入，button组件展示
 
-### 安装tailwindcss
+## 安装tailwindcss
 [tailwindcss](https://tailwind.nodejs.cn/)
 
 ```js
@@ -597,7 +597,7 @@ const addStore = () => {
   }
   
 ```
-#### 适配原理
+### 适配原理
 我们可以看到`tailwindcss`尺寸都是基于rem的 如下
 
 ![微信截图_20240510171000.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50815d6800d44ce7b22701f2fa5b0fd8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=734&h=497&s=80316&e=jpg&b=ffffff)
@@ -624,7 +624,7 @@ const addStore = () => {
     window.dispatchEvent(new Event("resize"));
   </script>
 ```
-#### 安装postcss-pxtorem 插件，将px转为rem
+### 安装postcss-pxtorem 插件，将px转为rem
 
 `npm i postcss-pxtorem -S`
 `postcss.config.js`更改为
@@ -650,7 +650,7 @@ export default {
 ```
 这样可以按照标准设计稿1920对应的尺寸来开发了 如设计稿`120px` 可 写为 `tailwindcss`的 `w-[120px]`
 
-### eslint 
+## eslint 
 恰逢eslint@9 及扁平化配置出来，技术有限，配置了半天没搞定扁平化配置，还是使用非扁平化的配置方式，
 `package.json`中`devDependencies`增加如下依赖 [eslint](https://eslint.org/)，哪位大佬搞出扁平化配置了，踢我一脚
 
@@ -730,7 +730,7 @@ module.exports = {
 
 ![微信截图_20240417173002.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4f268fbc4f7748469b3f3dac3035ae7c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=724&h=374&s=78459&e=jpg&b=202020)
 
-### 安装axios
+## 安装axios
 
 
 ```js
@@ -738,7 +738,7 @@ npm i axios -S
 ```
 关于 `axios` 一个封装请求，尅要根据自己业务需要特定的封装，官方文档如下 [axios](https://www.baidu.com/link?url=Zuwad2Hr5w6sIfnUsGZHUlHCZTf_buooUwzq7qn_bC1wrIlNZZ5yRupJRFDrTue9&wd=&eqid=c71938650001e8eb00000003661f973e)
 
-### 结尾
+## 结尾
 
 好了 结束 
 

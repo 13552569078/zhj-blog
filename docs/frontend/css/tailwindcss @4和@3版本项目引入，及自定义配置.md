@@ -1,12 +1,12 @@
-### 背景
+## 背景
 
 `tailwindcss`已经升级到@4版本，并且已经成为了默认的版本，较于`@3版本`引用及自定义配置均有了变化，下面我们就对比下这两个版本的引用不同点
 
 本文已 `vue3 vite`框架来做试验
 
-### vue3 vite  tailwindcss\@3 版本
+## vue3 vite  tailwindcss\@3 版本
 
-#### 初始化项目
+### 初始化项目
 
 ```js
 npm create vite@latest  --template vue
@@ -15,7 +15,7 @@ npm install
 npm run dev
 ```
 
-#### 安装tailwindcss\@3 和 postcss 引入
+### 安装tailwindcss\@3 和 postcss 引入
 
 ```js
 npm install -D tailwindcss@3  postcss autoprefixer 
@@ -88,7 +88,7 @@ createApp(App).mount('#app')
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/78650da7cbb544b9acb1ecd31e192b80~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755070946&x-orig-sign=jN7txGB9b7XXr2meccXiEmRC9Uo%3D)
 
-#### 自定义tailwindcss配置
+### 自定义tailwindcss配置
 
 `tailwind.config.js`配置如下
 
@@ -181,9 +181,9 @@ export default {
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ab930680bf4f45b48264e939b67e957a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755070946&x-orig-sign=Wqv3BeqmyFsLtT4rGYUUVhvRS7U%3D)
 
-### vue3 vite  tailwindcss\@4 版本
+## vue3 vite  tailwindcss\@4 版本
 
-#### 初始化项目
+### 初始化项目
 
 ```js
 npm create vite@latest  --template vue-2
@@ -192,7 +192,7 @@ npm install
 npm run dev
 ```
 
-#### 4版本采用插件安装
+### 4版本采用插件安装
 
 ```js
 npm install tailwindcss @tailwindcss/vite
@@ -227,7 +227,7 @@ export default defineConfig({
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/52d73da2e0ed4e14bac0c7c2f679d22c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755070946&x-orig-sign=yHGjRWyfz5Hsjs3TnMhij7yI3ho%3D)
 
-#### 自定义样式
+### 自定义样式
 
 `index.css`
 

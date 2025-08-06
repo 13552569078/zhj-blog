@@ -1,10 +1,10 @@
-##### 1：采用h5新增API navigator.clipboard.write来写入剪贴板
-##### 2：本api设计到权限较大，所以部署只允许是https才可使用，当然本地环境可以调
+#### 1：采用h5新增API navigator.clipboard.write来写入剪贴板
+#### 2：本api设计到权限较大，所以部署只允许是https才可使用，当然本地环境可以调
 
-##### 3：简单的复制文字
+#### 3：简单的复制文字
 `navigator.clipboard.writeText('Linr Text to be copied')`
-##### 4：复制图片  赋值图片目前我仅支持png类型，所以其他类型得图片需要转为png类型，本文章仅仅实现jpg文件转为png
-##### 实现思路 1）：使用fetch 获取文件得bold流（如果服务器不支持fetch获取图片，请运维配置下ngnix
+#### 4：复制图片  赋值图片目前我仅支持png类型，所以其他类型得图片需要转为png类型，本文章仅仅实现jpg文件转为png
+#### 实现思路 1）：使用fetch 获取文件得bold流（如果服务器不支持fetch获取图片，请运维配置下ngnix
 
 `location ^~ / {
             root   html;
@@ -14,9 +14,9 @@
     add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
         }`
         
-##### 5：如果是png则直接复制，如果不是则转为png
-##### 6：写入剪贴板navigator.clipboard.write
-##### 7：完整代码如下
+#### 5：如果是png则直接复制，如果不是则转为png
+#### 6：写入剪贴板navigator.clipboard.write
+#### 7：完整代码如下
 
 `<script>
       copyImg = async url => {

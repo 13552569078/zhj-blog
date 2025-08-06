@@ -1,26 +1,26 @@
-### 背景
+## 背景
 本文主要介绍 项目如何放到nginx二级目录，或者ngnix部署多个站点，大致3点<br />
 1：路由base设置<br />
 2: vite或webpack的base设置<br />
 3：nginx配置<br />
 
-#### 技术栈
+### 技术栈
 采用的vue3+vite+ts构建的，当然，技术栈不重要，重要的是解决方式，vue3+webpack的方式，放在文章最后解决
 
-### vite
-##### 1：根目录新建.env.development文件，环境便令必须‘VITE_’开头
+## vite
+#### 1：根目录新建.env.development文件，环境便令必须‘VITE_’开头
 
 ```js
 NODE_ENV='development'
 VITE_BASE_PATH='/'
 ```
-##### 2：根目录新建.env.production文件，'front-test'为部署服务器的二级目录名称，注意名称统一
+#### 2：根目录新建.env.production文件，'front-test'为部署服务器的二级目录名称，注意名称统一
 
 ```js
 NODE_ENV='production'
 VITE_BASE_PATH=/front-test/
 ```
-##### 3：package.json 修改，--mode传入 环境变量
+#### 3：package.json 修改，--mode传入 环境变量
 
 ```js
 "scripts": {
@@ -29,7 +29,7 @@ VITE_BASE_PATH=/front-test/
     "preview": "vite preview"
   },
 ```
-##### 4：router中，设置base，由于vue-router@4.0以上版本，base字段取消，具体修改如下
+#### 4：router中，设置base，由于vue-router@4.0以上版本，base字段取消，具体修改如下
 
 ```js
 // 路由
@@ -39,7 +39,7 @@ const router = createRouter({
 })
 ```
 `import.meta.env.VITE_BASE_PATH`，可取到环境变量，设置base
-##### 5：vite.config.ts
+#### 5：vite.config.ts
 由于vite项目的启动顺序，`import.meta.env.VITE_BASE_PATH`无法在`vite.config.ts`中直接获取，但是提供了`loadEnv(mode, process.cwd())`来获取，具体操作如下,设置vite的base
 
 ```js
@@ -90,9 +90,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 
 ```
 仅仅关注`base`字段设置即可，`plugins`，`resolve`不影响
-##### 6：npm run build 把 dist打包好的文件，直接复制到二级目录下，访问即可
+#### 6：npm run build 把 dist打包好的文件，直接复制到二级目录下，访问即可
 
-### nginx配置
+## nginx配置
 
 nginx配置，如服务器目录为 `ai-chat-room-h5`，nginx得root默认为html文件夹，可以更改root指向，我这里就不更改了，ng需要对应配置
 
@@ -133,9 +133,9 @@ nginx配置，如服务器目录为 `ai-chat-room-h5`，nginx得root默认为htm
 
 关于nginx的斜杠问题 可以 参考[nginx斜杠使用](url)
 
-### webpack解决方式
-##### 1： `.env.development`  `.env.production` `package.json` 修改雷同，不重复书写
-##### 2：router设置base
+## webpack解决方式
+#### 1： `.env.development`  `.env.production` `package.json` 修改雷同，不重复书写
+#### 2：router设置base
 
 ```js
 const router = createRouter({
@@ -147,7 +147,7 @@ const router = createRouter({
 });
 ```
 `PROD_PREFIX`为webpack中的环境变量名称，可以自行命名，`process.env`在webpack中获取环境变量，注意于vite区分
-##### 3：vue.config.js   publicPath
+#### 3：vue.config.js   publicPath
 
 ```js
 const isProduction = process.env.NODE_ENV === 'production';

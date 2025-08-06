@@ -1,4 +1,4 @@
-### 背景
+## 背景
 
 vite项目部署，我们为了避免多服务器频繁打包部署，抽离了共有变量到public中的settings.js，
 
@@ -23,7 +23,7 @@ const defaultSettings = {
 现: 我们build 项目到服务器后，更改了`settings.js`，中的部分字段，由于缓存的存在，更新完成后settings.js请求到的数据仍然为未更新过的（当然，浏览器会一定时间后，自动更新静态文件缓存。你可以清空缓存并加载），但我们想每次部署后，再次刷新浏览器就可以看到最新的`settings.js`
 
 
-### 解决办法
+## 解决办法
 我们自定义一个vite插件，实现每次build后，将
 
 ```js
@@ -39,7 +39,7 @@ const defaultSettings = {
 这样，每次build部署后，settings后会有时间戳，每次都不一样，可避免浏览器缓存
 
 
-### vite插件及格式规则如下
+## vite插件及格式规则如下
 
 Vite 插件是一种用于扩展 Vite 功能的工具，允许开发者自定义构建配置，以满足特定的开发需求。Vite 插件可以针对开发服务器和生产构建过程进行特定的操作和优化。自定义 Vite 插件通常遵循以下格式：
 
@@ -55,7 +55,7 @@ Vite 插件是一种用于扩展 Vite 功能的工具，允许开发者自定义
 通过遵循这些格式和约定，开发者可以创建出功能丰富、高度自定义的 Vite 插件，以满足项目开发中的特定需求。
 
 
-### 插件书写
+## 插件书写
 
 
 ```js
@@ -109,7 +109,7 @@ export const vitePluginAddScriptVersion = {
     -   最后，`transformIndexHtml` 方法返回替换后的 HTML 字符串。
 
 
-### 插件使用
+## 插件使用
 `vite-plugin-add-script-version`文件目录和`vite.config.ts`平级 
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41392322028e46d5a7f9d16c977395a4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=552&h=220&s=11832&e=png&b=191919)
@@ -123,7 +123,7 @@ export const vitePluginAddScriptVersion = {
 
 
 
-### 结果：
+## 结果：
 
 最终打包后的`index.html` 结构如下 
 
@@ -156,7 +156,7 @@ export const vitePluginAddScriptVersion = {
 ```
 
 
-### webpack中如何解决如此问题
+## webpack中如何解决如此问题
 
 在 webpack 的构建过程中，特别是当与一些模板引擎（如 html-webpack-plugin）结合使用时，你会看到这样的语法。这里的 `<%= ... %>` 是模板引擎的插值语法，用于将某些变量或表达式的值插入到 HTML 文件中。可借助webpack的模板语法来实现
 

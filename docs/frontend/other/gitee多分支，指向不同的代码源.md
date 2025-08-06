@@ -1,17 +1,17 @@
-### 背景
+## 背景
 有时候需要在同一个项目的不同分支中 创建不同的代码源，比如我们基于`element-plus` 创建一个自己的组件库，但是想要 `element-plus`升级的时候，需要`merge`其升级的代码，这就需要我们创建一个分支 源是 `element-plus`的，每次更新则 `merge`到自己得 组件库分支
 
 下面我们在 `gitee`  和 `github` 为例，在gitee创建分支，某一个源是 `github`的
 
-### 详细流程
+## 详细流程
 
-#### `gitee` 创建代码仓库, 并上传初始代码，
+### `gitee` 创建代码仓库, 并上传初始代码，
 
 此处省略，请自行创建并初始化代码，可以是`element-plus`的某一个版本
 
-#### 关联远端的`github`源码仓库
+### 关联远端的`github`源码仓库
 
-#####  配置多个远程仓库
+####  配置多个远程仓库
 
 ```js
 # 添加Gitee远程仓库（假设已存在）
@@ -21,7 +21,7 @@ git remote add gitee <gitee仓库地址>
 git remote add github <github仓库地址>
 ```
 
-#####  从 Gitee 拉取代码并创建分支
+####  从 Gitee 拉取代码并创建分支
 
 
 ```js
@@ -36,7 +36,7 @@ git checkout -b main gitee/main
 git checkout -b feature-v3.1.0
 
 ```
-##### 从 GitHub 拉取代码并覆盖当前分支
+#### 从 GitHub 拉取代码并覆盖当前分支
 
 ```js
 # 从 GitHub拉取代码
@@ -46,7 +46,7 @@ git fetch github
 git merge github/feature-v3.1.0 --allow-unrelated-histories
 ```
 
-#####  推送新分支到指定远程仓库
+####  推送新分支到指定远程仓库
 
 ```js
 git push -u gitee feature-v3.1.0

@@ -1,8 +1,8 @@
-### 背景
+## 背景
 
 react项目中，开发单页面应用，`reactRouter`免不了使用，今天记录下路由的配置及使用规范，版本为"react-router-dom": "^6.26.0"
 
-### 创建测试项目
+## 创建测试项目
 
 ```js
 npm create vite@latest react-test
@@ -10,7 +10,7 @@ npm create vite@latest react-test
 
 选择react 即可，按提示安装依赖并启动，我这里选择ts开发
 
-### 安装路由
+## 安装路由
 
 ```js
 npm install react-router-dom -S
@@ -72,9 +72,9 @@ export default App
 
 此时启动项目，可打开登录页，路由匹配不到可到未匹配页面，后面的例子再此项目上实践
 
-### 路由跳转
+## 路由跳转
 
-#### 申明式导航  `link`
+### 申明式导航  `link`
 
 登陆组件 `login` `index.tsx`代码引入，路由做对应的配置，创建对应测试文件，可实现跳转
 
@@ -95,7 +95,7 @@ export default Login;
 
 ```
 
-#### 编程式导航  `navigate`
+### 编程式导航  `navigate`
 
 ```js
 import { Link, useNavigate } from "react-router-dom";
@@ -116,9 +116,9 @@ export default Login;
 
 ```
 
-### 路由传参
+## 路由传参
 
-#### 直接传入路径字符串及接收
+### 直接传入路径字符串及接收
 
 ```js
 import { Link, useNavigate } from "react-router-dom";
@@ -173,7 +173,7 @@ export default Test1;
 
 字符串传参，直接在`navigate`拼接即可，`useSearchParams`来接收参数
 
-#### **Location State**
+### **Location State**
 
 ```js
 import { Link, useLocation } from "react-router-dom";
@@ -203,7 +203,7 @@ const goTest2 = () => {
 
 `goTest2`使用`Location State`传参， `useLocation`来接收参数
 
-### 路由嵌套
+## 路由嵌套
 
 *   在一级路由中又内嵌了其他路由，这种关系就叫做**嵌套路由**；
 *   嵌套至一级路由内的路由又称为**二级路由**

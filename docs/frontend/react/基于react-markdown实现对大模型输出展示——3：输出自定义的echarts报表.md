@@ -19,7 +19,7 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[2,'我是2的id']]
 
-### 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
+## 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
 
 <div id="echarts-container" style="width: 600px; height: 400px;"></div>
 `;
@@ -122,7 +122,7 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[2,'我是2的id']]
 
-### 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
+## 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
 <div style="display:flex">
 <div id="echarts-container-1" style="width: 600px; height: 400px;"></div>
 <div id="echarts-container-2" style="width: 600px; height: 400px;"></div>

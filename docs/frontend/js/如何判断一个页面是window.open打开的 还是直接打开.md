@@ -1,7 +1,7 @@
-### 背景
+## 背景
 我们做需求，有时候会遇见特殊的需求，比如我们一个系统A点击某些操作可以跳转到另一个系统B，此时B系统需要知晓，如果是其他系统跳转过来的，我们展示有功能（OPRATION1）,单独打开的没有(OPRATION1)功能，可以看成按钮等一类的特殊操作
 
-### 实现
+## 实现
 我们可以借助 `window.opener`来判断是否是跳转过来的，按`vue3`举例
 
 
@@ -15,7 +15,7 @@ const fromOpen = ref(window.opener && window.opener !== window);
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/565a5b7be8a24ab59e1e9c0fac3cc9de~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755072279&x-orig-sign=la3ILLtH6OUif1b6l2j5rCDlR%2FU%3D)
 
 
-### 注意事项
+## 注意事项
 -   **刷新与复制URL**：
 
     -   即使通过`window.open`打开的页面被刷新（如F5），`window.opener`属性仍然会存在。

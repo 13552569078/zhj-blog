@@ -1,8 +1,8 @@
-### 背景
+## 背景
 
 最近做类似`AI会话gpt`流式输出的效果，使用的是`@microsoft/fetch-event-source`组件，借助vue和react的数据响应，可轻松实现流式输出，在 `vue3+vite`  和 `react+vite` 的架构中，可以实现流式输出，今天同样功能特定客户需要`vue2+webpack`来实现，要我写个demo，代码逻辑迁移过去换个写法而已，简单。。 可是写完后发现无法流式输出，总是一下子全部返回数据，即使设置了流式返回
 
-### 代码如下
+## 代码如下
 
 ```js
 fetchEventSource("/******/local_application_chat", {
@@ -72,7 +72,7 @@ fetchEventSource("/******/local_application_chat", {
 
 代码逻辑 在`onmessage`中，我们会拿到返回的流式数据，动态拼接，但是总是一下统一返回渲染
 
-### 解决方式
+## 解决方式
 
 webpack中 默认开启了  `compress`，在 `vue.config.js` 设置为false，
 
@@ -95,7 +95,7 @@ devServer: {
 
 此时可流式输出，vite中 `compress` 默认是 false 所以不用设置就可流式输出
 
-### nginx配置
+## nginx配置
 
 ```js
 location / {
@@ -109,7 +109,7 @@ location / {
 
 ```
 
-### 参数解释
+## 参数解释
 
 在 `vue.config.js` 文件中，`devServer` 是一个用于配置 Vue CLI 项目开发服务器的对象。当你设置 `compress: false` 时，你实际上是在告诉开发服务器不要对响应的内容进行压缩。
 
@@ -125,7 +125,7 @@ location / {
 
 总之，`compress` 选项在 `vue.config.js` 的 `devServer` 配置中用于控制开发服务器是否应该对响应内容进行压缩。将其设置为 `false` 可以加快开发过程中的响应速度，并避免与压缩相关的潜在问题。
 
-### 补充
+## 补充
 
 最近修改`dify`源码，发现本地开发也没有流式输出，线上`docker`部署后是支持流式输出的，查找后原因和webpack 几乎一致，我们需要对应修改下 以下配置
 

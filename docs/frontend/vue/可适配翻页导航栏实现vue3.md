@@ -1,20 +1,20 @@
-### 背景
+## 背景
 横向导航栏菜单过多的时候，会造成横向的导航栏隐藏，现想做当导航栏过多隐藏的时候，加一个【下一页】，当左边有隐藏的时候，加一个【上一页】，效果如下<br />
-##### 1：导航过多，则展示下一页
+#### 1：导航过多，则展示下一页
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a449ffdf6386494aa7465400d1e16c85~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1905&h=224&s=33217&e=png&b=ffffff)
 
-##### 2：点击了下一页，则左右有隐藏后，展示上一页
+#### 2：点击了下一页，则左右有隐藏后，展示上一页
 
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dcabd9ac47274d4f8c5194160d405f29~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1751&h=95&s=8042&e=png&b=fffefe)
 
-##### 3：最终实现如下：
+#### 3：最终实现如下：
 [jvideo](https://www.ixigua.com/7384724425498690088?utm_source=xiguastudio)
 
 
-### 实现思路
-##### 1:dom元素中有scrollWidth，clientWidth，scrollLeft属性，
+## 实现思路
+#### 1:dom元素中有scrollWidth，clientWidth，scrollLeft属性，
 在DOM（Document Object Model）中，`scrollWidth`、`clientWidth` 和 `scrollLeft` 是与元素滚动和尺寸相关的属性，特别是在处理滚动容器或可滚动元素时非常有用。以下是这三个属性的详细解释：
 
 1.  **`scrollWidth`**：
@@ -39,16 +39,16 @@
 
 简单来说就是`clientWidth`是一个dom元素的可视窗口宽度，`scrollWidth`是全部内容的宽度，`scrollLeft`是元素距离左右的滚动距离
 
-##### 2: 判断 `dom.scrollWidth > dom.clientWidth + dom.scrollLeft` 来判断当前元素是否被隐藏，隐藏了则证明右侧有内容被遮盖，这时 下一页按钮需要展示。为避免临界值，可以增加固定宽度来辅助校验 如 `dom.scrollWidth > dom.clientWidth + dom.scrollLeft + 80` 80为辅助校验的，有时`dom.clientWidth + dom.scrollLeft`到最右边了，但是仍小于 `dom.scrollWidth` 处理精度问题
+#### 2: 判断 `dom.scrollWidth > dom.clientWidth + dom.scrollLeft` 来判断当前元素是否被隐藏，隐藏了则证明右侧有内容被遮盖，这时 下一页按钮需要展示。为避免临界值，可以增加固定宽度来辅助校验 如 `dom.scrollWidth > dom.clientWidth + dom.scrollLeft + 80` 80为辅助校验的，有时`dom.clientWidth + dom.scrollLeft`到最右边了，但是仍小于 `dom.scrollWidth` 处理精度问题
 
-##### 3: 判断`dom.scrollLeft`是否是0，不为0则是左右有隐藏，需要展示 上一页按钮
+#### 3: 判断`dom.scrollLeft`是否是0，不为0则是左右有隐藏，需要展示 上一页按钮
  
-##### 4: 每次点击前后的操作时， `dom.scrollLeft += 120` 或者  `dom.scrollLeft -= 120`，更改左侧间距
+#### 4: 每次点击前后的操作时， `dom.scrollLeft += 120` 或者  `dom.scrollLeft -= 120`，更改左侧间距
 
-##### 5: js动态设置  `dom.scrollLeft`并不会触发 `css` 的  `transition`过度，我们需要增加一个函数，来模拟滚动的平滑滚动
+#### 5: js动态设置  `dom.scrollLeft`并不会触发 `css` 的  `transition`过度，我们需要增加一个函数，来模拟滚动的平滑滚动
 
 
-### 代码结构如下，借助vue3来实现demo，源码如下
+## 代码结构如下，借助vue3来实现demo，源码如下
 
 
 ```js

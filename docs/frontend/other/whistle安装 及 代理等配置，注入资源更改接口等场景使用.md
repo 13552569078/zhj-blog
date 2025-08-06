@@ -1,12 +1,12 @@
-### 背景
+## 背景
 
 我们前端代理 经常使用的是 `webpack` 或者`vite`的 `devServer proxy`来代理本地开发， 最近被安利了`whistle`，此不仅仅可以设置代理，也可以进行抓包分析，手机端抓包等等，下面就介绍下`whistle`的安装配置 及场景
 
 [文档地址](https://wproxy.org/whistle/)
 
-### 安装
+## 安装
 
-#### 安装并启动
+### 安装并启动
 
 `whistle`是基于 `node`的 所以你要先下载 `node`并全局安装 `whistle`
 
@@ -25,7 +25,7 @@ w2 start // 启动whistle
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/387a2e3286c54fe7949a5d07e646248a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=5u7f43afbQjZqkjLA8cNRM0dsIs%3D)
 
-#### 安装https证书
+### 安装https证书
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b621273138c84dc9867c54aa6d133f6a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=59dUeh%2B6X9N1B3zG%2FJhuXIQIViM%3D)
 
@@ -45,7 +45,7 @@ w2 start // 启动whistle
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0bc601afa9414e51884867f8daf12998~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=wpfq6dI2cKs17QKCpZiCv575Wec%3D)
 
-#### 谷歌浏览器为例 安装 proxy SwitchyOmega 插件
+### 谷歌浏览器为例 安装 proxy SwitchyOmega 插件
 
 你可以谷歌浏览器插件安装(科学上网)，也可以解压完成后 手动安装，手动安装下载地址如下[ 插件地址](https://chrome.zzzmh.cn/info/padekgcemlokbadohgkifijomclgjgif)
 
@@ -53,7 +53,7 @@ w2 start // 启动whistle
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a302b76bbc72486d8dd306626e77a789~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=4ebV%2Bv0RPsMllKsU%2Fnc%2Bm2YhZYo%3D)
 
-#### proxy SwitchyOmega 插件 设置代理
+### proxy SwitchyOmega 插件 设置代理
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ad920f1558b24cc2992307ee9795e133~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=RSeoztRnfxsz26ELCnfB3Cj7B94%3D)
 
@@ -65,21 +65,21 @@ w2 start // 启动whistle
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/3b34478ffdf74da3868ee2dec3b387de~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=8a1YCd2Uy%2FgkmWnhf3XpXQVUus8%3D)
 
-#### 应用此配置
+### 应用此配置
 
 点击浏览器的插件 ，你可以固定此插件到标签栏，选择 `whistle`运行（没有出来的话 多点击几次 或者重启电脑浏览器）
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7cff0b80642f4d96acdd8816a74876c7~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=lIqb2OEo1Z5H8mTnVF6N3P18X%2BI%3D)
 
-#### 配置成功 抓包测试
+### 配置成功 抓包测试
 
 此时我们都配置成功了，现在我们使用 `whistle`插件，所有的浏览器访问 都会经过我们的 启动的  `whistle`服务地址 `127.0.0.1：8899`进行转发， 我们可以在浏览器打开`http://baidu.com` ，看下是否能抓包,
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/00bda623799645098fbc0436cc2ea98e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=vlHmSWwVKa9KiQ7ce2ngR4SaOk0%3D)
 
-### 使用场景
+## 使用场景
 
-#### 1前端跨域处理
+### 1前端跨域处理
 
 简单写一个后端模拟接口 我们后端端口在`3000`， 写个模拟接口
 
@@ -173,7 +173,7 @@ http://10.56.181.203:3000 resCors://*
 
 如果上述例子不成功，请打开f12 清空缓存并硬性加载
 
-#### 2更改接口返回  使用本地文件  mock数据
+### 2更改接口返回  使用本地文件  mock数据
 
 我们可以增加配置 如上方的接口地址 我们配置 返回的结果可以是自己自定义本地文件 如下
 
@@ -189,7 +189,7 @@ http://10.56.181.203:3000/list C:\Users\Administrator\Desktop\wh\test.json
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d143c1a0ceef4ee7bae47738d445af18~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=zI%2BWJYbV4okLS6ewKr6r2gDmsPs%3D)
 
-#### 3替换线上的文件，本地文件替换线上环境
+### 3替换线上的文件，本地文件替换线上环境
 
 加入我们有一个文件上线报错，我们无法线上调试，可以将线上的文件 替换为本地文件，在本地调试
 
@@ -205,7 +205,7 @@ https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js C:\Users\Admin
 
 可以看到 线上的js已经替换为本地的 你可以修复查找问题
 
-#### 4线上环境注入本地资源
+### 4线上环境注入本地资源
 
 我们可以为线上环境注入资源 如我们注入本地的css 改变线上的地址，可以本地开发 线上的时候直接看效果，方便生产环境部署
 为百度诸如一个css 颜色设置为绿色
@@ -224,7 +224,7 @@ https://www.baidu.com css:///Users\Administrator\Desktop\wh\color.css
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9ce4fe09fd40425eae0aad325cba6b29~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=hOcnefPgQbmvD084zkpD1Aq7Fb0%3D)
 
-#### 5请求转发
+### 5请求转发
 
 跟场景1效果类同  可以做代理转发 也可以做IP转发
 我访问`http://aaa.com` 会被转发到  ` http://www.baidu.com`,可借助此实现跨域代理
@@ -235,7 +235,7 @@ http://aaa.com http://www.baidu.com
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/cc4d6a2d42054a27ac2329438e46c5db~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=jQPQjHJyDpS7bXhP54c1x7rOry4%3D)
 
-#### 6线上环境注入代码 如移动端注入 vconsole
+### 6线上环境注入代码 如移动端注入 vconsole
 
 首先 values 创建引入及执行的代码段
 
@@ -264,7 +264,7 @@ https://www.baidu.com jsPrepend://{newconsole.js} # 实例化
 
 借助此你可以很方便的调试线上及移动端
 
-#### 7打印日志  利用抓包调试请求
+### 7打印日志  利用抓包调试请求
 
 出了上面的注入vconsole 我们可以开启日志功能  我们可以在whistle看见所有的请求，也起到了线上移动端调试功能
 
@@ -278,6 +278,6 @@ https://www.baidu.com log://
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/249afdafee214e9fbe227e486ff46f4b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071469&x-orig-sign=JpX2Mf41IG9PMIozj0UuJodJfuk%3D)
 
-### 总结
+## 总结
 
 我们介绍了如何安装 `whistle` 特介绍了使用场景，如设置代理 诸如资源等等，

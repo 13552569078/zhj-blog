@@ -33,7 +33,7 @@
 
 基于你已经在`package.json`中增加不同项目的打包命令，也创建了不同的`.env`环境配置
 
-### 创建  `global-api.ts` 用于获取全环境配置
+## 创建  `global-api.ts` 用于获取全环境配置
 
 ```js
 
@@ -59,14 +59,14 @@ export { GlobalAPI };
 
 ```
 
-### 其他组件使用 `GlobalAPI`
+## 其他组件使用 `GlobalAPI`
 
 ```js
 import { GlobalAPI } from "@/constants"; // 换成你得暴露地址
 document.title = GlobalAPI?.config?.VITE_SYSTEM_TITLE || "政务知识助手";
 ```
 
-### 创建 `vite-plugin-generate-settings.js` vite插件
+## 创建 `vite-plugin-generate-settings.js` vite插件
 
 ```js
 // vite-plugin-generate-settings.js
@@ -143,7 +143,7 @@ export default generateSettingsPlugin;
 
 此插件的作用就是，获取当前的环境变量已 `VITE_`开头的，并且生成对用的 `setting.json`
 
-### `vite.config.ts 引用此插件`
+## `vite.config.ts 引用此插件`
 
 ```js
 export default defineConfig(({ command, mode }) => {
@@ -160,7 +160,7 @@ export default defineConfig(({ command, mode }) => {
 ...你的其余配置
 ```
 
-### 执行 `npm run build:xxx`
+## 执行 `npm run build:xxx`
 
 执行 `npm run build:xxx` 默认会在`dist`文件目录中生成， `setting.json`
 
@@ -175,7 +175,7 @@ export default defineConfig(({ command, mode }) => {
 }
 ```
 
-### 初始化的时候重新获取  `setting.json`更改配置 （我的是在axios中）
+## 初始化的时候重新获取  `setting.json`更改配置 （我的是在axios中）
 
 鉴于我们全局有请求接口，如获取用户信息的，我们在`axios`中，重新设置配置项
 
@@ -221,7 +221,7 @@ const request = new Request<Service.RequestResult>({
   })
 ```
 
-### 部署成功后，修改 `setting.json`,此时我们动态修改一个数据，刷新页面 页面的  `GlobalAPI`已经生效
+## 部署成功后，修改 `setting.json`,此时我们动态修改一个数据，刷新页面 页面的  `GlobalAPI`已经生效
 
 ## 总结
 

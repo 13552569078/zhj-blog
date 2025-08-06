@@ -16,7 +16,7 @@
 
 ## 实现方案
 
-### 1：原始效果及展示
+## 1：原始效果及展示
 
 以上规则，demo代码及展示如下
 
@@ -32,7 +32,7 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[1,'我是1的id']]
 
-### 三级标题：Markdown 丰富示例 [[1,'我是1的id']]
+## 三级标题：Markdown 丰富示例 [[1,'我是1的id']]
 `;
 
 const App = () => {
@@ -56,7 +56,7 @@ export default App;
 
 现在我们按需截取特殊约定字符
 
-### 2: 正则截取
+## 2: 正则截取
 
 正则截取，我们将顺序回显，id作为自定义属性添加到元素上，借助`rehype-raw`渲染出来自定义的标签，注意自定义属性data-supid
 
@@ -72,7 +72,7 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[1,'我是1的id']]
 
-### 三级标题：Markdown 丰富示例 [[1,'我是1的id']]
+## 三级标题：Markdown 丰富示例 [[1,'我是1的id']]
 `;
 
 const replaceReferences = (str)=> {
@@ -104,7 +104,7 @@ export default App;
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d441d4c08dbe4fdab00252eadb08e16b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071753&x-orig-sign=5CwFWwaOZQ3PObEzdJrNSFmWMCY%3D)
 
-### 3：美化样式
+## 3：美化样式
 
 对于创建的元素，可以使用tailwindcss 修改样式，或者其他自定义样式均可，和普通`html`样式样式无异
 
@@ -124,7 +124,7 @@ const replaceReferences = (str)=> {
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c59c8ce5770e401780cc984b33314fc8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071753&x-orig-sign=OarHb3q%2FG8i%2BTWLEpOSukvK%2FkDk%3D)
 
-### 4：自定义事件触发
+## 4：自定义事件触发
 
 借助`react-markdown`的 `components`来自定义标签
 
@@ -140,7 +140,7 @@ const richMarkdownContent = `
 
 ## 二级标题：Markdown 丰富示例 [[2,'我是2的id']]
 
-### 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
+## 三级标题：Markdown 丰富示例 [[3,'我是3的id']]
 `;
 
 const replaceReferences = (str) => {

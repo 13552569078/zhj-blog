@@ -12,7 +12,7 @@
 
 ## 初始化react 项目 并引入 Tailwind CSS
 
-### vite 搭建react 项目
+## vite 搭建react 项目
 
 ```js
 npm create vite@latest my-react-app -- --template react
@@ -23,7 +23,7 @@ npm run dev
 
 ## 引入tailwindcss
 
-### 安装依赖
+## 安装依赖
 
 ```js
 npm install tailwindcss@3 postcss autoprefixer -S
@@ -31,7 +31,7 @@ npm install tailwindcss@3 postcss autoprefixer -S
 
 我使用的 `tailwindcss`版本是 `tailwindcss": "^3.4.17"`
 
-###  初始化 Tailwind CSS
+##  初始化 Tailwind CSS
 
 在项目根目录下运行以下命令来创建一个 `tailwind.config.js` 文件, 根目录多出 `postcss.config.js` 和`tailwind.config.js`两个文件
 
@@ -39,7 +39,7 @@ npm install tailwindcss@3 postcss autoprefixer -S
 npx tailwindcss init -p
 ```
 
-### 配置 Tailwind CSS
+## 配置 Tailwind CSS
 
 `tailwind.config.js` 配置如下
 
@@ -54,7 +54,7 @@ export default {
 }
 ```
 
-### 配置 PostCSS
+## 配置 PostCSS
 
 `postcss.config.js` 配置：
 
@@ -67,7 +67,7 @@ export default {
 }
 ```
 
-###  在项目中引入 Tailwind CSS
+##  在项目中引入 Tailwind CSS
 
 在你的 `src/index.css` 或相应的 CSS 文件中引入 Tailwind CSS：
 
@@ -77,7 +77,7 @@ export default {
 @tailwind utilities;
 ```
 
-###  使用 Tailwind CSS 类名
+##  使用 Tailwind CSS 类名
 
 `app.jsx`使用 Tailwind CSS 的工具类
 
@@ -89,7 +89,7 @@ function App() {
 }
 ```
 
-### 运行你的项目
+## 运行你的项目
 
 可以看见引入成功效果
 
@@ -106,7 +106,7 @@ npm run dev
 
 ## react-markdown
 
-### 引入并初步展示`md`文档
+## 引入并初步展示`md`文档
 
 ```js
 npm i react-markdown -S
@@ -126,14 +126,14 @@ const richMarkdownContent = `
 
 ## 二级标题：列表
 
-### 无序列表
+## 无序列表
 - 无序列表项 1
 - 无序列表项 2
   - 子列表项 2.1
   - 子列表项 2.2
 - 无序列表项 3
 
-### 有序列表
+## 有序列表
 1. 有序列表项 1
 2. 有序列表项 2
    1. 子有序列表项 2.1
@@ -149,7 +149,7 @@ const richMarkdownContent = `
 | 单元格 1 | 单元格 2 | 单元格 3 |
 | 单元格 4 | 单元格 5 | 单元格 6 |
 
-### 三级标题：嵌套结构示例
+## 三级标题：嵌套结构示例
 可以在表格里嵌套列表，例如：
 
 | 列表嵌套 | 详情 |
@@ -177,7 +177,7 @@ export default App;
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/997a5774a9f14185b91bf4b8c32e8a3f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071717&x-orig-sign=EwMSihYYzvmo%2FYBV6sBR%2BuvmJ%2Bc%3D)
 仅仅对于基础的做了展示，`表格 Ul ol 超链接`等 并不能很好的回显
 
-### 样式美化
+## 样式美化
 
 ```js
 npm install github-markdown-css -S
@@ -199,14 +199,14 @@ const richMarkdownContent = `
 
 ## 二级标题：列表
 
-### 无序列表
+## 无序列表
 - 无序列表项 1
 - 无序列表项 2
   - 子列表项 2.1
   - 子列表项 2.2
 - 无序列表项 3
 
-### 有序列表
+## 有序列表
 1. 有序列表项 1
 2. 有序列表项 2
    1. 子有序列表项 2.1
@@ -222,7 +222,7 @@ const richMarkdownContent = `
 | 单元格 1 | 单元格 2 | 单元格 3 |
 | 单元格 4 | 单元格 5 | 单元格 6 |
 
-### 三级标题：嵌套结构示例
+## 三级标题：嵌套结构示例
 可以在表格里嵌套列表，例如：
 
 | 列表嵌套 | 详情 |
@@ -251,7 +251,7 @@ export default App;
 
 可见`md`格式样式出现了，但是部分元素 如表格啥的还是无法展示
 
-### 引入 remark-gfm
+## 引入 remark-gfm
 
 ```js
 npm i remark-gfm -S
@@ -273,14 +273,14 @@ const richMarkdownContent = `
 
 ## 二级标题：列表
 
-### 无序列表
+## 无序列表
 - 无序列表项 1
 - 无序列表项 2
   - 子列表项 2.1
   - 子列表项 2.2
 - 无序列表项 3
 
-### 有序列表
+## 有序列表
 1. 有序列表项 1
 2. 有序列表项 2
    1. 子有序列表项 2.1
@@ -296,7 +296,7 @@ const richMarkdownContent = `
 | 单元格 1 | 单元格 2 | 单元格 3 |
 | 单元格 4 | 单元格 5 | 单元格 6 |
 
-### 三级标题：嵌套结构示例
+## 三级标题：嵌套结构示例
 可以在表格里嵌套列表，例如：
 
 | 列表嵌套 | 详情 |
@@ -325,7 +325,7 @@ export default App;
 
 表格已经展示，
 
-### 展示 html结构
+## 展示 html结构
 
 我们将代码做以下修改
 
@@ -362,7 +362,7 @@ export default App;
 
 `html`结构没有展示
 
-### 引入 rehype-raw
+## 引入 rehype-raw
 
 ```js
 npm i rehype-raw -S
@@ -410,31 +410,31 @@ export default App;
 
 以下是 `react-markdown`、`remark-gfm`、`rehype-raw` 和 `github-markdown-css` 这几个库和插件的作用：
 
-### 1. `react-markdown`
+## 1. `react-markdown`
 
 `react-markdown` 是一个用于在 React 应用中渲染 Markdown 内容的库。Markdown 是一种轻量级标记语言，使用简单的文本格式来创建富文本内容，例如标题、列表、链接等。`react-markdown` 可以将 Markdown 字符串转换为 React 组件，使得在 React 应用中显示 Markdown 内容变得非常方便。
 
-### 2. `remark-gfm`
+## 2. `remark-gfm`
 
 `remark-gfm` 是一个 `remark` 插件，用于支持 GitHub Flavored Markdown（GFM）。GFM 是 GitHub 对标准 Markdown 的扩展，增加了一些额外的功能，如表格、任务列表、自动链接等。
 
-#### 作用
+### 作用
 
 当你使用 `react-markdown` 渲染 Markdown 内容时，默认情况下可能不支持这些 GFM 特性。通过引入 `remark-gfm` 插件，可以让 `react-markdown` 能够正确解析和渲染这些扩展的 Markdown 语法。
 
-### 3. `rehype-raw`
+## 3. `rehype-raw`
 
 `rehype-raw` 是一个 `rehype` 插件，用于处理 Markdown 中的原始 HTML 内容。在 Markdown 中，有时会嵌入一些 HTML 标签，例如 `<div>`、`<span>` 等。默认情况下，`react-markdown` 可能会过滤掉这些原始 HTML 内容，以确保安全性。
 
-#### 作用
+### 作用
 
 使用 `rehype-raw` 插件可以让 `react-markdown` 解析并渲染这些原始 HTML 标签，使得 Markdown 中嵌入的 HTML 内容能够正常显示。
 
-### 4. `github-markdown-css`
+## 4. `github-markdown-css`
 
 `github-markdown-css` 是一个 CSS 文件，它提供了与 GitHub 上 Markdown 内容相同的样式。当你在自己的应用中渲染 Markdown 内容时，使用这个 CSS 文件可以让渲染结果看起来与 GitHub 上的 Markdown 样式一致，包括标题、列表、代码块等的样式。
 
-#### 作用
+### 作用
 
 通过引入 `github-markdown-css`，可以让你的 Markdown 内容在视觉上更加美观和专业，同时保持与 GitHub 风格的一致性。
 

@@ -1,7 +1,7 @@
-### 背景
+## 背景
 做一行溢出...展示得时候，flex:1;会撑破盒子，造成溢出...无法正确展示，解决方式是flex:1元素 加上 `overflow: hidden;`
 
-### 标准盒子溢出无此问题，代码及展示如下
+## 标准盒子溢出无此问题，代码及展示如下
 
 ```js
 <head>
@@ -31,7 +31,7 @@
 
 ![微信截图_20240510101854.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/508f57406266447e979765dada44aea8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=715&h=97&s=27461&e=jpg&b=fffefe)
 
-### 包含一层flex:1元素，无法正确溢出
+## 包含一层flex:1元素，无法正确溢出
 
 
 ```js

@@ -1,7 +1,7 @@
-#### vitrpress是什么
+### vitrpress是什么
 不同于vuepress是基于Webpack构建，vitepress基于vite搭建，启动更快，配置更少，热更新更快，更适合于结合vue3快速搭建文档库或者博客，本文章适用于新入手vitePress搭建者，至于如何发布自己的组件库或者如何在组件库中搭建发布文档，则在后续文章提供。
-#### 要我们开始吧
-##### 首先创建一个项目
+### 要我们开始吧
+#### 首先创建一个项目
 1. `mkdir vitepress-starter && cd vitepress-starter`
 2. `npm init`
 3. `npm i --dev vitepress vue`
@@ -32,10 +32,10 @@ VitePress 将在 `http://localhost:5173` 启动一个本地开发服务器。
 
 ![1.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b6a1d3e7e944dc7a925cd2211f1e471~tplv-k3u1fbpfcp-watermark.image?)
 
-##### 我们做下配置，自定义站点
+#### 我们做下配置，自定义站点
 vitepree的所有配置均在.vitepress中，放置所有 VitePress 特定文件的地方，首先在docs文件下创建.vitepress文件夹，.vitepress文件夹下创建config.js，config.js配置文件，所有定制化均在此文件
 。`.vitepress/config.js`，它应该导出一个 JavaScript 对象
-##### 自定义标题
+#### 自定义标题
 
 ```js
 export default {
@@ -48,7 +48,7 @@ export default {
 
 ![3.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e2cfb04b24f84473b3b1a8bdb0b508df~tplv-k3u1fbpfcp-watermark.image?)
 
-##### 自定义icon
+#### 自定义icon
 docs文件夹下创建public文件夹，此public文件夹是存放所有静态文件的地方，添加一个logo.png，
 
 ```js
@@ -65,7 +65,7 @@ export default {
 
 ![4.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/254754b3518740e6868c2d3983ab4d05~tplv-k3u1fbpfcp-watermark.image?)
 
-##### 创建nav bar，创建顶部导航
+#### 创建nav bar，创建顶部导航
 顶部导航同样需要在`.vitepress/config.js`设置，我们我们单独将nav抽离出来，方便维护，在.vitepress下创建`nav.js`文件
 
 ```js
@@ -104,7 +104,7 @@ export default {
 
 ![6.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6478d0b3db4d444c880b9098af2fd231~tplv-k3u1fbpfcp-watermark.image?)
 
-##### 创建sidebar 导航，我们的需求是根据nav导航，对应展示不同的sidebar
+#### 创建sidebar 导航，我们的需求是根据nav导航，对应展示不同的sidebar
 `.vitepress/config.js`创建`sidebar.js`
 
 ```js
@@ -160,7 +160,7 @@ export default {
 
 **此时基础的文档已经形成接下来我们完善下**
 
-##### 修改home页面，
+#### 修改home页面，
 vitepress提供了三种页面布局doc page home,
 
 `docs index.md`文件做以下修改
@@ -202,14 +202,14 @@ features:
 
 首页我们已经优化，接下来可进行md文档优化，现在仅仅是输出文案，md语法可以掌握下
 我们在`javascript index.md`增加下md语法
-##### 链接
+#### 链接
 
 ```js
 [首页](/) <!-- 点击跳转到 根目录的 index.md -->
 
 [Html](/Html/) <!-- 点击跳转到 Html 目录的 index.html -->
 ```
-##### 表格
+#### 表格
 
 ```js
 | aa        | bb           | cc  |
@@ -218,7 +218,7 @@ features:
 | 222      | 44      |   666 |
 | 333 | 444      |    666 |
 ```
-##### 标题
+#### 标题
 
 ```js
 ::: info
@@ -251,7 +251,7 @@ console.log('Hello, VitePress!')
 ```
 [其余可参考md语法](https://vitejs.cn/vitepress/guide/markdown.html)
 
-##### 其余配置
+#### 其余配置
 
 ```js
 import { nav } from "./nav"

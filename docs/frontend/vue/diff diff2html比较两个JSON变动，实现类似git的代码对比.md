@@ -1,17 +1,17 @@
-### 背景
+## 背景
 
 项目中有比较两个json，并可视化展示对应变更的场景，经调研可借用`diff`和`diff2html`来实现，这两个插件实现的功能很强大，具体可查看对应的文档[diff](https://www.npmjs.com/package/diff) 、[diff2html](https://www.npmjs.com/package/diff2html)
 最终效果如下
 
 ![微信截图\_20240919141838.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e8e73267f3104b56a3bf2cae18457d72~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755072027&x-orig-sign=1vB6QM%2Fmo7rsXdKAJWrxaf3gP0U%3D)
 
-### 安装
+## 安装
 
 ```js
 npm i diff diff2html -S
 ```
 
-### 实现
+## 实现
 
 vue3版本实现demo
 
@@ -130,6 +130,6 @@ onMounted(() => {
 
 ```
 
-### 说明
+## 说明
 
 `diff2html`实现对比渲染，接收`diff`类型字符串，可以借用`diff`来实现，也可以后端生成对用得字符串，前端渲染

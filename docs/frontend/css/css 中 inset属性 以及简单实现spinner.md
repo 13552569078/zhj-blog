@@ -1,12 +1,12 @@
-### 背景
+## 背景
 
 水文，记录下css属性而已
 
-### inset
+## inset
 
 `inset` 是 CSS 中的一个简写属性，用于同时设置元素的 **`top`、`right`、`bottom`、`left`** 四个定位属性。它的设计目的是简化定位相关的样式声明，尤其适合需要同时调整元素四个方向位置的场景。
 
-#### 基本语法
+### 基本语法
 
 `inset` 可以接受 1\~4 个值，遵循与 `margin`、`padding` 类似的简写规则：
 
@@ -24,7 +24,7 @@ inset: <value1> <value2> <value3>;
 inset: <value1> <value2> <value3> <value4>;
 ```
 
-#### **取值类型**
+### **取值类型**
 
 `inset` 支持多种 CSS 长度单位和关键字：
 
@@ -32,7 +32,7 @@ inset: <value1> <value2> <value3> <value4>;
 *   关键字：`auto`（默认值，由浏览器自动计算）
 *   其他：`calc()` 计算值（例如 `inset: calc(50% - 100px)`）
 
-#### **与单独属性的对应关系**
+### **与单独属性的对应关系**
 
 `inset` 的简写方式完全等价于分别设置四个方向的属性，例如：
 
@@ -53,7 +53,7 @@ left: 40px;
 *   `inset: 10px auto;` → `top:10px; bottom:10px; right:auto; left:auto;`
 *   `inset: 0 20%;` → `top:0; bottom:0; right:20%; left:20%;`
 
-#### **使用场景**
+### **使用场景**
 
 `inset` 通常与 **`position` 属性**  **`fixed` 属性** 配合使用，根据不同的定位方式产生不同效果：
 
@@ -91,7 +91,7 @@ left: 40px;
     }
 ```
 
-### 简单实现spinner
+## 简单实现spinner
 
 我们借助 `border` `border-top` 和`border-radius` 可以简化的实现 spinner效果 代码如下
 

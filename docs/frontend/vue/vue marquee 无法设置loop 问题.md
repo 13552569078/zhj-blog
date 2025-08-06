@@ -1,4 +1,4 @@
-##### 1：vue项目 使用marquee 文字轮播 设置loop="1"时无效，渲染为loop="1"
+#### 1：vue项目 使用marquee 文字轮播 设置loop="1"时无效，渲染为loop="1"
 `<marquee loop="1">测试得数据</marquee>`
 html渲染为
 

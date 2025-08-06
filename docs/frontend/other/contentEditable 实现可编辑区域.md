@@ -1,4 +1,4 @@
-### 背景
+## 背景
 
 最近看豆包的时候，发现他的代码写AI编程模块 如下
 
@@ -6,13 +6,13 @@
 
 如果我们开发大模型，免不了东西借鉴一下，下面基于react 来封装 一个 使用`contentEditable `来实现的可编辑区域组件
 
-### 实现重点
+## 实现重点
 
 1.  开启 `contentEditable `后 如何模拟 `placeholder`
 2.  如何判断何时展示 `placeholder` 何时展示真实内容
 3.  调整优化以及受控组件封装
 
-### 代码如下
+## 代码如下
 
 ```js
 import React, { useState, useRef, useEffect } from 'react'
@@ -111,7 +111,7 @@ export default ContentEditablePrompt
 <EditableArea placeholder='预设提取项' value='' onChange={onChangeValue}></EditableArea>
 ```
 
-### 结束
+## 结束
 
 ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/eef5cddd3b644d1ca942d4b93ed543cd~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5LiJ5bCP5rKz:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIyMjU2MjE0MTIxMDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1755071068&x-orig-sign=BI2MKl0nUxPMAwdAHAFd7OHuV0s%3D)
 

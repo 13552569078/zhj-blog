@@ -1,4 +1,4 @@
-### 1：什么是GitHub.io，它能干什么
+## 1：什么是GitHub.io，它能干什么
 GitHub.io 就是GitPage,可以展示你的项目及项目网站的托管工具，可以理解为免费的阿里云等服务器，可以展示网站（比如你想搭建一个自己的博客，项目文档等）
 ## 2：如何使用GitHub.io
 1> 首选需要有一个github账号，[没有的话可以去注册](https://github.com/signup)<br/>
