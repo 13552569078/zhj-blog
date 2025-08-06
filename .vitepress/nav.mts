@@ -15,7 +15,7 @@ export default [
   {
     text: "前端技术",
     activeMatch: "/frontend",
-    link: "/frontend/AI/纯前端调用deepseek%20v3模型，流式返回，支持md文本、table、代码等",
+    link: "/frontend/index",
     // items: [
     //   { text: "AI大模型", link: "/frontend/AI/index" },
     //   { text: "vue", link: "/frontend/vue/index" },
