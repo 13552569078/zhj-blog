@@ -131,7 +131,7 @@ nginx配置，如服务器目录为 `ai-chat-room-h5`，nginx得root默认为htm
       }
 ```
 
-关于nginx的斜杠问题 可以 参考[nginx斜杠使用](url)
+关于nginx的斜杠问题 可以 参考[nginx斜杠使用]
 
 ## webpack解决方式
 #### 1： `.env.development`  `.env.production` `package.json` 修改雷同，不重复书写

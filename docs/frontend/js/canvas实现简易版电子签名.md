@@ -63,5 +63,3 @@ var canvas = document.getElementById('signature');
             a.click();
         });
 ```
-
-[参考文档](url)https://juejin.cn/post/7202445722972405817

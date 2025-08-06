@@ -81,8 +81,8 @@ export default {
           link: "/frontend/porject/vite项目改变打包结果目录结构",
         },
         {
-          text: "VUE部署服务器二级目录及更深层目录，白屏问题解决（VUE3+VITE部署二级目录白屏）",
-          link: "/frontend/porject/VUE部署服务器二级目录及更深层目录，白屏问题解决（VUE3+VITE部署二级目录白屏）",
+          text: "VUE部署服务器二级目录及更深层目录，白屏问题解决",
+          link: "/frontend/porject/VUE部署服务器二级目录及更深层目录，白屏问题解决",
         },
         {
           text: "npm 发包的 2FA 验证",
@@ -273,10 +273,6 @@ export default {
         {
           text: "使用navigator.mediaDevices 实现网页录屏及下载",
           link: "/frontend/other/使用navigator.mediaDevices 实现网页录屏及下载",
-        },
-        {
-          text: "图片url复制到剪贴板，粘贴到钉钉 微信 word等（navigator.clipboard.write",
-          link: "/frontend/other/图片url复制到剪贴板，粘贴到钉钉 微信 word等（navigator.clipboard.write",
         },
         {
           text: "一台电脑同时设置公司的gitlab及自己的github的ssh, 管理不同账户呢",
