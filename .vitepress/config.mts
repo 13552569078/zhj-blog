@@ -10,7 +10,6 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }], // 确保路径正确
   ],
-  lang: "en",
   themeConfig: {
     nav: nav,
 
@@ -18,7 +17,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/13552569078/zhj-blog" },
-      // { icon: "twitter", link: "..." },
+      { icon: "twitter", link: "https://x.com/home" },
     ],
     footer: {
       message: "本博客内容基于 MIT 许可证发布，欢迎合理转载。",
